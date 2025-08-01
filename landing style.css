@@ -1,0 +1,124 @@
+.barra-nav-{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: var(--cor-fundo);
+}
+
+.modo-escuro-{
+    width: 60px;
+    height: 60px;
+    border-radius: 15%;
+    background-color: var(--cor-fundo-darkmode);
+    position: absolute;
+    top: 1px; 
+    right:10px
+}
+.modo-escuro-:hover{
+    background-color:#8A9AC6;
+    border: #8A9AC6 2px solid;
+}
+
+.apresentacao-landing {
+    text-align: center;
+    margin: 40px 0;
+}
+.apresentacao-titulo-landing{
+    font-family:var(--fonte-principal);
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--cor-fundo-darkmode);
+    text-decoration: underline;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.apresentacao-texto-landing {
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--cor-fundo-darkmode);
+    margin-top: 5px;
+}
+
+.landing-imagem {
+    width: 30%;
+    height: 1400px;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+.Projetos-landing {
+    display: flex;
+   flex-direction: column; 
+   align-items: center; 
+   gap: 20px;
+}
+.landing-apresentacao {
+    list-style-type: none;
+}
+
+
+@media screen and (max-width: 412px) {
+
+    .barra-nav- {
+        flex-direction: column;
+        align-items: center;
+        margin:10px;
+    }
+
+    .apresentacao-landing{
+        margin:30px
+    }
+
+    .apresentacao-titulo-landing {
+        font-size: 30px;
+    }
+
+    .apresentacao-texto-landing {
+        font-size: 20px;
+    }
+
+    .landing-imagem {
+        width: 100%;
+        height: auto;
+    }
+
+    .Projetos-landing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .landing-apresentacao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+}
+
+
+body.dark-mode {
+    background-color: var(--cor-fundo-darkmode);
+}
+
+body.dark-mode .modo-escuro-{
+    background-color: var(--cor-fundo);
+}
+
+body.dark-mode .landing-apresentacao{
+    background-color: var(--cor-fundo);
+    color: var(--cor-fundo-darkmode);
+}
+
+body.dark-mode .apresentacao-titulo-landing {
+        color: var(--cor-fundo);
+    }
+
+    body.dark-mode .apresentacao-texto-landing {
+        color: var(--cor-fundo);
+    }
+
