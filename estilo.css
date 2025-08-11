@@ -3,6 +3,11 @@
     display: none;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 a[href*="Jacbus"] {
     color: var(--cor-fonte-principal) !important;
     text-decoration: underline;

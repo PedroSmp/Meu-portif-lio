@@ -112,6 +112,21 @@
         transition: transform 0.3s cubic-bezier(.77,0,.18,1);
         display: flex;
     }
+
+    .apresentacao-landing{
+        margin-top: 25%;
+    }
+
+    .apresentacao-titulo-landing{
+        font-size: 30px;
+        font-weight: 700;
+    }
+
+    .apresentacao-texto-landing{
+        font-size: 25px;
+        font-weight: 500;
+    }
+
     .menu {
         color: var(--cor-fundo);
         font-size: 25px;
@@ -136,4 +151,12 @@
         padding: 10px 20px;
         gap: 5px; 
     }
-}    
+}  
+
+body.dark-mode .apresentacao-titulo-landing{
+    color: var(--cor-fundo);
+}
+
+body.dark-mode .apresentacao-texto-landing{
+    color: var(--cor-fundo);
+}
