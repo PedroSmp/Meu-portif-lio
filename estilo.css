@@ -98,8 +98,10 @@ body {
 .modo-escuro{
     width: 64px;
     height: 94px;
+    border-color: none;
     border-radius: 10%;
-    background-color: var(--cor-fundo-darkmode);
+    box-shadow: 2px 2px 4px var(--cor-fundo-darkmode);
+    background-color: var(--cor-fundo);
     position: absolute;
     top: 1px; 
     right:10px; 
@@ -499,7 +501,7 @@ a:hover {
         width: 60px;
         height: 60px;
         border-radius: 50%;
-        background-color: var(--cor-fundo-darkmode);
+        background-color: var(--cor-fundo);
         position: absolute;
         top: 10px;
         right: 10px;
@@ -546,9 +548,10 @@ a:hover {
         gap: 20px; /* Aumenta o espaçamento entre os projetos */
     }
     .projeto {
+        background-color: red;
         width: 350px; /* Largura responsiva para os projetos */
         padding: 20px; /* Ajusta o padding */
-        margin: 10px 0; /* Espaço entre os projetos */
+        margin: 5%; /* Espaço entre os projetos */
     }
     .projeto-imagens{
         flex-direction: column; /* Coloca as imagens em coluna */
@@ -638,7 +641,7 @@ body.dark-mode .menu-link {
 }
 
 body.dark-mode .modo-escuro {
-    background-color: var(--cor-fundo-darkmode);
+    background-color: var(--cor-fundo);
     border: none;
 }
 

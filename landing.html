@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="landing style.css">
 </head>
 <body>
-    <nav class="barra-nav-" id="barra-nav">
-        <button class="modo-escuro-" id="modo">
+     <div id="overlay-menu"></div>
+    <button id="menu-hamburguer" class="menu-hamburguer" aria-label="Abrir menu">
+        <img src="fotos/menu hamburguer 1.svg" alt="Menu" class="menu-hamburguer-imagem">
+    </button>
+    <nav class="barra-nav" id="barra-nav">
+        <button class="menu" id="btn-projetos">
+             <a href="index.html" class="menu-link">Página inicial</a>
+        </button>
+        <button class="modo-escuro" id="modo">
             <span class="modo-claro">
                 <img src="fotos/dark mode.svg" alt="Modo claro" class="modo-claro-imagem">
             </span>
@@ -27,9 +34,10 @@
                     <img src="fotos/SIMPLESKIN.svg" alt="imagem de uma Landing page versão website feita no Figma" class="landing-imagem">
                     <img src="fotos/SIMPLE SKIN APP.svg" alt="imagem de uma Landing page versão mobile feita no Figma" class="landing-imagem">
                 </div>
-                <p class="link-projeto">Se quiser análisar com mais detalhe aqui está o link do projeto <a href="https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1&t=aytK4A2AjPEI0FVa-1">LANDING PAGE</a>
+                <p class="link-projeto">Se quiser análisar com mais detalhe aqui está o link do projeto <a href="https://www.figma.com/design/woCzpfIru8pB5rW3lDHcm9/E--TICKET?node-id=0-1&t=aytK4A2AjPEI0FVa-1" class="link">LANDING PAGE</a>
             </li>
     </section>
-<script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="script-menu.js"></script>
 </body>
 </html>
