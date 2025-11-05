@@ -15,6 +15,7 @@ a[href*="Jacbus"] {
 }
 :root {
     --fonte-principal: 'Cormorant Garamond', serif;
+    --fonte-secundaria: 'Montserrat';
     --cor-fundo-darkmode: #212842; /* Fundo escuro para o modo dark */
     --cor-fundo: #F0E7D5; /* Bege claro */
 }
@@ -29,6 +30,9 @@ body {
     line-height: 1.6; /* Melhora a legibilidade */
     letter-spacing: 0.5px; /* Sutil espaçamento entre letras */
 }
+
+/*-------------------------*/
+/*------NAV------------*/
 
 .btn-topo {
     align-items: center;
@@ -123,6 +127,10 @@ body {
     height: 60px;
 }
 
+
+
+/*-------------------------*/
+/*--------HEADER----------*/
 .apresentacao{
     display: flex;
     padding: 50px 40px; /* Aumenta o padding */
@@ -153,10 +161,11 @@ body {
 }
 
 .apresentacao-texto {
+    font-family: var(--fonte-secundaria);
     color: var(--cor-fundo-darkmode);
     font-size: 25px; /* Aumenta o tamanho da fonte */
     text-align: left;
-    font-weight: 700;
+    font-weight: 400;
     width: 100%;
     margin-top: 12px;
 }
@@ -170,6 +179,11 @@ body {
     flex-shrink: 0;
 }
 
+
+
+
+/*-------------------------*/
+/*--------PROJETOS---------*/
 .Projetos {
     font-size: 20px;
     padding: 50px 40px; /* Aumenta o padding */
@@ -193,6 +207,7 @@ body {
 }
 
 .Projetos-texto {
+    font-family: var(--fonte-secundaria);
     font-size: 25px;
     text-align: left;
     font-weight: 600;
@@ -224,31 +239,37 @@ body {
 }
 
 .projeto-nome {
-    font-size: 30px; /* Aumenta o tamanho do nome do projeto */
+    font-size: 35px; /* Aumenta o tamanho do nome do projeto */
     font-weight: 700; /* Deixa o nome mais destacado */
     color: var(--cor-fundo);
     margin-bottom: 10px; /* Espaço abaixo do nome do projeto */
 }
 
 .projeto-texto{
+    font-family: var(--fonte-secundaria);
     line-height: 1.5;
     color: var(--cor-fundo);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .link-projeto{
+    font-family: var(--fonte-secundaria);
+    margin-top: 15px;
     color: var(--cor-fundo);
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 400;
     text-decoration: none;
 }
 a{
+    font-weight: 500;
+    font-size: 25px;
     color: var(--cor-fundo);
-    text-decoration: none;
+    text-decoration: line;
 }
 a:hover {
-    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+    font-size: 30px;
+    color: white;
 }
 
 .projeto-imagens{
@@ -287,6 +308,11 @@ a:hover {
     margin-top: 15px; /* Espaço entre o texto e a imagem */
 }
 
+
+
+
+/*-------------------------*/
+/*--------HABILIDADES------*/
 .minhas-habilidades {
     font-size: 20px;
     padding: 50px 40px; /* Aumenta o padding */
@@ -318,6 +344,7 @@ a:hover {
 }
 
 .habilidade-item {
+    font-family: var(--fonte-secundaria);
     background: var(--cor-fundo-darkmode);
     color: var(--cor-fundo);
     padding: 10px 20px; /* Adiciona padding para espaçamento interno */
@@ -325,6 +352,10 @@ a:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* Sombra para cada item */
 }
 
+
+
+/*-------------------------*/
+/*----SOBRE MIM-----------*/
 .sobre-mim {
     font-size: 18px;
     padding: 40px 50px; /* Aumenta o padding */
@@ -348,12 +379,16 @@ a:hover {
 }
 
 .sobre-mim-texto {
+    font-family: var(--fonte-secundaria);
     color: var(--cor-fundo);
     font-size: 20px;
-    font-weight: 700;
-    line-height: 1.8; /* Melhora a legibilidade de textos longos */
+    font-weight: 500;
+    line-height: 1.9; /* Melhora a legibilidade de textos longos */
 }
 
+
+/*-------------------------*/
+/*--------CONTATO---------*/
 .contato{
     padding: 50px 40px; /* Aumenta o padding */
     max-width: 900px; /* Aumenta a largura máxima */
@@ -373,9 +408,10 @@ a:hover {
 }
 
 .contato-texto {
+    font-family: var(--fonte-secundaria);
     font-size: 25px;
     text-align: left;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--cor-fundo-darkmode);
 }
 
@@ -401,6 +437,9 @@ a:hover {
     box-shadow: 0 4px 12px rgba(255,255,255,0.15); /* Sombra para cada item */
 }
 
+
+/*-------------------------*/
+/*--------FOOTER---------*/
 .footer-vericidade {
     width: 100%;
     background: var(--cor-fundo);
@@ -421,7 +460,14 @@ a:hover {
     font-weight: 700;
     text-align: center;
 }
-@media screen and (max-width: 412px) { /* Ajusta o layout para telas menores */
+
+
+/*-------------------------*/
+/*--------MEDIA QUERIES MOBILE---------*/
+@media screen and (max-width: 576px) { /* Cobre a maioria dos celulares */
+    /*
+     * Estrutura do Menu Hambúrguer e Overlay
+     */
     #menu-hamburguer {
         display: block !important;
         position: fixed;
@@ -441,7 +487,6 @@ a:hover {
         object-fit: contain;
         display: block;
     }
-    /* Overlay para escurecer o fundo quando o menu está aberto */
     #overlay-menu {
         display: none;
         position: fixed;
@@ -450,6 +495,7 @@ a:hover {
         width: 100vw;
         height: 100vh;
         z-index: 2099;
+        background-color: rgba(0, 0, 0, 0.5); /* Adicionei um escurecimento para o overlay */
     }
     #overlay-menu.ativo {
         display: block;
@@ -459,14 +505,14 @@ a:hover {
         left: 0;
         top: 0;
         height: 100vh;
-        width: 72vw;
+        width: 80vw; /* Ajustei para 80vw, um pouco mais responsivo */
         min-width: 120px;
-        max-width: 260px;
+        max-width: 300px; /* Aumentei um pouco o max-width */
         background-color: var(--cor-fundo-darkmode);
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: 32px 0 0 0;
+        padding: 60px 0 0 0; /* Mais espaço no topo */
         margin: 0;
         border-radius: 0 12px 12px 0;
         gap: 0;
@@ -474,37 +520,27 @@ a:hover {
         box-shadow: 2px 0 12px rgba(0,0,0,0.12);
         transform: translateX(-100%);
         transition: transform 0.3s cubic-bezier(.77,0,.18,1);
-        display: flex;
+        display: flex; /* Garante que está visível no mobile */
     }
-    .menu {
-        color: var(--cor-fundo);
-        font-size: 25px;
-        font-weight: 600;
-        border: none;
-        border-bottom: 1px solid var(--cor-fundo);
-        width: 80%;
-        text-align: left;
-        padding: 10px 20px;
-        gap: 5px; /* Espaçamento entre os itens do menu */
-        margin-left: 20px; /* Espaço à esquerda do menu */
+    .barra-nav.menu-aberto {
+        transform: translateX(0);
+        box-shadow: 2px 0 24px rgba(0,0,0,0.18);
     }
-
+    .menu,
     .menu-contato {
         color: var(--cor-fundo);
-        font-size: 25px;
+        font-size: 20px; /* Um pouco menor para mobile */
         font-weight: 600;
         border: none;
         border-bottom: 1px solid var(--cor-fundo);
-        width: 80%;
+        width: 90%; /* Ocupa mais espaço dentro do nav */
         text-align: left;
-        padding: 10px 20px;
-        gap: 5px; /* Espaçamento entre os itens do menu */
-        margin-left: 20px; /* Espaço à esquerda do menu */
+        padding: 15px 20px;
+        margin-left: 5%; /* Centraliza o item */
     }
-
     .modo-escuro {
-        width: 60px;
-        height: 60px;
+        width: 50px; /* Um pouco menor */
+        height: 50px;
         border-radius: 50%;
         background-color: var(--cor-fundo);
         position: absolute;
@@ -513,87 +549,86 @@ a:hover {
     }
     .modo-escuro:hover {
         cursor: pointer;
-        background-color: #8A9AC6; /* Cor de hover mais clara */
-        border: none; /* Remove a borda no hover */
+        background-color: #8A9AC6;
+        border: none;
     }
-    .barra-nav.menu-aberto {
-        transform: translateX(0);
-        box-shadow: 2px 0 24px rgba(0,0,0,0.18);
-    }
-    /* Remove display:none da barra-nav no mobile */
-    /* Remove display:block do menu hamburguer no dark-mode, já está garantido acima */
 
+    /*
+     * Seções de Conteúdo
+     */
     .apresentacao-titulo {
         color: var(--cor-fundo-darkmode);
-        font-size: 30px; /* Ajusta o tamanho da fonte */
-        margin-left: 20px; /* Ajusta a margem esquerda */
-        width: 80%; /* Garante que o título ocupe a largura total */
+        font-size: 26px; /* Ajuste sutil */
+        margin-left: 5%; /* Ajuste a margem para porcentagem */
+        width: 90%;
     }
     .apresentacao-texto {
         color: var(--cor-fundo-darkmode);
-        font-size: 20px; /* Ajusta o tamanho da fonte */
-        width: 80%; /* Garante que o texto ocupe a largura total */
-        margin-left: 20px; /* Ajusta a margem esquerda */
+        font-size: 18px; /* Ajuste sutil */
+        width: 90%;
+        margin-left: 5%;
         text-align: justify;
     }
     .Projetos{
-        margin: 80px auto; /* Ajusta a margem */
+        margin: 60px auto; /* Ajuste a margem */
     }
     .Projetos-texto {
-        font-size: 25px; /* Ajusta o tamanho da fonte */
+        font-size: 22px; /* Ajuste sutil */
         text-align: left;
         font-weight: 700;
         color: var(--cor-fundo-darkmode);
-        width: 80%; /* Garante que o texto ocupe a largura total */
-        margin-left: 15px; /* Ajusta a margem esquerda */
+        width: 90%;
+        margin-left: 5%;
     }
     .projetos-apresentacao {
-        flex-direction: column; /* Coloca os projetos em coluna */
-        align-items: center; /* Centraliza os projetos */
-        gap: 20px; /* Aumenta o espaçamento entre os projetos */
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
     }
     .projeto {
         background-color: var(--cor-fundo-darkmode);
-        width: 350px; /* Largura responsiva para os projetos */
-        padding: 20px; /* Ajusta o padding */
-        margin: 5%; /* Espaço entre os projetos */
+        width: 90%; /* Mais responsivo */
+        max-width: 380px; /* Limite de largura para não esticar demais */
+        padding: 20px;
+        margin: 0; /* Remove a margem desnecessária */
     }
     .projeto-imagens{
-        flex-direction: column; /* Coloca as imagens em coluna */
-        align-items: center; /* Centraliza as imagens */
-        gap: 10px; 
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
-    .projeto-imagem {
-        width: 400px; 
-        border-radius: 15px;
-    }
-    .projeto-imagem-persona {
-        width: 350px; /* Largura responsiva para as imagens */
-        height: auto; /* Altura automática para manter a proporção */
-    }
+    .projeto-imagem,
+    .projeto-imagem-persona,
     .projeto-imagem-double-diamond {
-        width: 350px; /* Largura responsiva para as imagens */
-        height: auto; /* Altura automática para manter a proporção */
+        width: 100%; /* Imagens ocupam 100% do container */
+        height: auto;
+        border-radius: 15px;
+        /* Removido o 'width: 400px;' fixo que estava quebrando */
     }
+
+    /*
+     * Sobre Mim e Contato
+     */
     .sobre-mim-texto {
         color: var(--cor-fundo);
-        font-size: 20px; /* Ajusta o tamanho da fonte */
-        width: 90%; /* Garante que o texto ocupe a largura total */
-        margin-left: 20px; /* Ajusta a margem esquerda */
+        font-size: 18px;
+        width: 90%;
+        margin-left: 5%;
         text-align: left;
     }
     .contato-texto{
         color: var(--cor-fundo-darkmode);
-        font-size: 20px; /* Ajusta o tamanho da fonte */
-        width: 90%; /* Garante que o texto ocupe a largura total */
+        font-size: 18px;
+        width: 90%;
+        margin-left: 5%;
         text-align: left;
     }
     .contato-item {
-        width: 80%; /* Garante que a lista ocupe a largura total */
-        margin: 10px auto; /* Centraliza os itens */
+        width: 90%;
+        margin: 10px 5%;
     }
     .celo-texto {
-        font-size: 14px; /* Ajusta o tamanho da fonte */
+        font-size: 12px; /* Um pouco menor */
         color: var(--cor-fundo-darkmode);
     }
     body.dark-mode #menu-hamburguer {
@@ -602,6 +637,32 @@ a:hover {
         border-radius: 10px;
         box-shadow: 0 2px 8px rgba(255, 255, 255, 0.278);
     }
+}
+
+
+/*-----------------------------------*/
+/*----------TABLETS------------------*/
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    /* Regras específicas para tablets pequenos */
+    .barra-nav {
+        /* Por exemplo, um menu que fica no topo, se for o caso de tablet */
+        /* ... ou manter as regras de coluna e reposicionar itens, etc. */
+    }
+    
+    .projeto {
+        width: 45%; /* Permite 2 projetos por linha em tablets */
+        max-width: none;
+    }
+    .projetos-apresentacao {
+        flex-direction: row; /* Volta a ser linha */
+        flex-wrap: wrap; /* Quebra para próxima linha */
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .projeto-imagem {
+        max-width: 300px; /* Limita o tamanho das imagens do projeto */
+    }
+    /* Mantenha as outras regras (fontes, margens) da versão mobile se fizer sentido. */
 }
 
 /* Remove display:none da barra-nav no mobile, pois o JS controla a exibição */
@@ -777,27 +838,3 @@ body.dark-mode .contato-item {
     margin-left: 50px;
 }
 
-@media screen and (max-width: 700px) {
-  .apresentacao {
-    flex-direction: column;
-    gap: 24px;
-    padding: 30px 10px;
-    text-align: center;
-  }
-  .apresentacao-conteudo {
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-  .apresentacao-foto {
-    width: 250px;
-    height: 250px;
-    margin: 0 auto;
-  }
-  .apresentacao-titulo, .apresentacao-texto {
-    text-align: center;
-    width: 100%;
-    margin-left: 0;
-  }
-  
-}
